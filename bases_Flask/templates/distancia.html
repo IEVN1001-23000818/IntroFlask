@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+ {%block container%}
+
+    <h1>Distancia</h1>
+
+<form action="/distancia" method="post">
+ 
+<div class="mb-3">
+ 
+    <label for="n1" class="form-label">Ingrese X1:</label>
+<input type="number" class="form-control" id="n1" name="n1">
+</div>
+<div class="mb-3">
+ 
+    <label for="n2" class="form-label">Ingrese Y1:</label>
+<input type="number" class="form-control" id="n2" name="n2">
+</div>
+
+<div class="mb-3">
+ 
+    <label for="n3" class="form-label">Ingrese X2:</label>
+<input type="number" class="form-control" id="n3" name="n3">
+</div>
+<div class="mb-3">
+ 
+    <label for="n4" class="form-label">Ingrese Y2:</label>
+<input type="number" class="form-control" id="n4" name="n4">
+</div>
+ 
+<button type="submit" class="btn btn-primary">Calcular</button>
+</form>
+ 
+<h1>
+El resultado es = {{ "%.2f"|format(res)}}
+</h1>
+ 
+
+{%endblock%}
